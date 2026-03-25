@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Display Capitals</h1>
+            <table border="3">
+                <tr>
+                    <th>PK/Id</th>
+                    <th>CountryID</th>
+                    <th>Capital ID</th>
+                    <th>Capital Name</th>
+                </tr>
+                {% for capital in QSLCAP %}
+                <tr>
+                    <td>{{capital.pk}}</td>
+                    <td>{{capital.conid.conid}}</td>
+                    <td>{{capital.capid}}</td>
+                    <td>{{capital.capname}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    </center>
+    
+</body>
+</html>
